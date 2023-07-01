@@ -16,6 +16,7 @@ const HomeClicked = () => {
   ContactView.style.display = "none";
   InfoView.style.display = "none";
   GuideView.style.display = "none";
+  closeNav();
 };
 
 const contactClicked = () => {
@@ -23,6 +24,7 @@ const contactClicked = () => {
   ContactView.style.display = "block";
   InfoView.style.display = "none";
   GuideView.style.display = "none";
+  closeNav();
 };
 
 const InfoClicked = () => {
@@ -30,6 +32,7 @@ const InfoClicked = () => {
   ContactView.style.display = "none";
   InfoView.style.display = "block";
   GuideView.style.display = "none";
+  closeNav();
 };
 
 const GuideClicked = () => {
@@ -37,6 +40,7 @@ const GuideClicked = () => {
   ContactView.style.display = "none";
   InfoView.style.display = "none";
   GuideView.style.display = "block";
+  closeNav();
 };
 
 buttons.forEach((button) => {
@@ -45,6 +49,13 @@ buttons.forEach((button) => {
     button.classList.add("active");
   });
 });
+
+const closeNav = () => {
+  Nav.style.height = "5rem";
+  Nav.style.paddingTop = "0rem";
+  switched = 0;
+  btns.style.display = "none";
+};
 
 let switched = 0;
 const NavClicked = () => {

@@ -82,7 +82,6 @@
     background-color: rgb(241, 241, 241);
     padding: 1rem 0 0 4rem;
     display: none;
-
 }
 
 .contact>.heading {
@@ -343,13 +342,145 @@ textarea::placeholder {
         padding: 1rem;
     }
 
-    .home h3,
-    p {
+    .home h3 {
         width: 100%;
+        margin: 0;
 
     }
 
     .home p {
         margin: 1rem 0 0 0;
+        text-align: center;
+    }
+
+    .info {
+        height: 100vh;
+        width: 100%;
+        background-color: rgb(243, 243, 243);
+        padding: 1rem;
+        display: none;
+    }
+
+    .main-wrapper>img {
+        width: 100%;
+    }
+
+    .article-wrapper {
+        height: 30rem;
+    }
+
+    .contact {
+        height: auto;
+        width: 100%;
+        background-color: rgb(241, 241, 241);
+        padding: 1rem 0 0 2rem;
+        display: none;
+    }
+
+    .contact>.heading {
+        font-size: 2rem;
+        font-family: "Montserrat", sans-serif;
+        margin: 2rem 0 0 0;
+    }
+
+    .contact>.title {
+        font-size: 3rem;
+        font-family: "Montserrat", sans-serif;
+        margin: 2rem 0 0 0rem;
+        font-weight: 500;
+        word-spacing: 0.5rem;
+    }
+
+    .textbox_wrapper>.textbox {
+        background-color: rgb(224, 224, 224);
+        width: 100%;
+        height: 3.5rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+        margin: 0 0 2rem 0;
+
+    }
+
+    .textbox_wrapper {
+        height: auto;
+        width: 100%;
+        margin: 1rem 0 0 0rem;
+        padding: 1rem 0;
+    }
+
+    .secondsec {
+        margin: 0 !important;
+        padding: 0rem 0 0 0 !important;
+    }
+
+    input {
+        outline: none;
+        border: none;
+        caret-color: #000000;
+    }
+
+    input::placeholder {
+        font-family: "Montserrat", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: rgb(74, 74, 74);
+    }
+
+    .parentWrapper {
+        display: flex;
+        justify-content: flex-start;
+        height: fit-content;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .contact>.message {
+        width: 90%;
+        background-color: rgb(224, 224, 224);
+        height: 9rem;
+        font-size: 1.5rem;
+        padding: 1rem;
+    }
+
+    textarea {
+        resize: none;
+        outline: none;
+        border: none;
+    }
+
+    textarea:focus {
+        outline: none;
+        border: none;
+    }
+
+    textarea::placeholder {
+        color: rgb(74, 74, 74);
+    }
+
+    .submit {
+        width: 90%;
+        height: 4rem;
+        background-color: #000000;
+        margin: 2.5rem 0 0rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: aliceblue;
+        font-size: 1.2rem;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 400;
+        transition: all 0.2s ease-in-out;
+        border: 1px solid transparent;
+    }
+
+    .submit>span {
+        margin: 0 0 0 1rem;
+    }
+
+    .submit:hover {
+        background-color: aliceblue;
+        color: #000000;
+        cursor: pointer;
+        border: 1px solid black;
     }
 }
