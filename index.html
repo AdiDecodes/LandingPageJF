@@ -8,20 +8,20 @@
         crossorigin="anonymous">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script defer src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
-<body>
+<body onload="HomeClicked()">
     <div class="main">
         <div class="left">
-            <div onClick="HomeClicked()" id="home" class="tags btn">Home</div>
+            <div onClick="HomeClicked()" id="home" class="tags btn active">Home</div>
             <div onClick="contactClicked()" id="contact" class="tags btn">Contact</div>
             <div onClick="InfoClicked()" id="information" class="tags btn">Information</div>
             <div onClick="GuideClicked()" id="guide" class="tags btn">Guide</div>
         </div>
         <div id="nav" class="navbar">
             <div id="btns" class="buttons">
-                <div onClick="HomeClicked()" class="tags btn">Home</div>
+                <div onClick="HomeClicked()" class="tags btn active">Home</div>
                 <div onClick="contactClicked()" class="tags btn">Contact</div>
                 <div onClick="InfoClicked()" class="tags btn">Information</div>
                 <div onClick="GuideClicked()" class="tags btn">Guide</div>
