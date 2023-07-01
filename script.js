@@ -4,19 +4,59 @@ const informationBtn = document.getElementById("information");
 const guideBtn = document.getElementById("guide");
 const HomeView = document.getElementById("homeTab");
 const InfoView = document.getElementById("InfoTab");
+const GuideView = document.getElementById("guideTab");
 const ContactView = document.getElementById("contactTab");
-home.addEventListener("click", (e) => {
-  HomeView.style.display = "block";
+const btns = document.getElementById("btns");
+const Nav = document.getElementById("nav");
+const menuIcon = document.getElementById("icon");
+const buttons = document.querySelectorAll(".btn");
+
+const HomeClicked = () => {
+  HomeView.style.display = "flex";
   ContactView.style.display = "none";
   InfoView.style.display = "none";
-});
-contactBtn.addEventListener("click", (e) => {
+  GuideView.style.display = "none";
+};
+
+const contactClicked = () => {
   HomeView.style.display = "none";
   ContactView.style.display = "block";
   InfoView.style.display = "none";
-});
-informationBtn.addEventListener("click", (e) => {
+  GuideView.style.display = "none";
+};
+
+const InfoClicked = () => {
   HomeView.style.display = "none";
   ContactView.style.display = "none";
   InfoView.style.display = "block";
+  GuideView.style.display = "none";
+};
+
+const GuideClicked = () => {
+  HomeView.style.display = "none";
+  ContactView.style.display = "none";
+  InfoView.style.display = "none";
+  GuideView.style.display = "block";
+};
+
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    buttons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+  });
 });
+
+let switched = 0;
+const NavClicked = () => {
+  if (switched == 0) {
+    Nav.style.height = "50vh";
+    Nav.style.paddingTop = "1.5rem";
+    switched = 1;
+    btns.style.display = "flex";
+  } else {
+    Nav.style.height = "5rem";
+    Nav.style.paddingTop = "0rem";
+    switched = 0;
+    btns.style.display = "none";
+  }
+};

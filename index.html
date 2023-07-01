@@ -8,20 +8,34 @@
         crossorigin="anonymous">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </head>
 
 <body>
     <div class="main">
         <div class="left">
-            <div id="home" class="tags">Home</div>
-            <div id="contact" class="tags">Contact</div>
-            <div id="information" class="tags">Information</div>
-            <div id="guide" class="tags">Guide</div>
+            <div onClick="HomeClicked()" id="home" class="tags btn">Home</div>
+            <div onClick="contactClicked()" id="contact" class="tags btn">Contact</div>
+            <div onClick="InfoClicked()" id="information" class="tags btn">Information</div>
+            <div onClick="GuideClicked()" id="guide" class="tags btn">Guide</div>
+        </div>
+        <div id="nav" class="navbar">
+            <div id="btns" class="buttons">
+                <div onClick="HomeClicked()" class="tags btn">Home</div>
+                <div onClick="contactClicked()" class="tags btn">Contact</div>
+                <div onClick="InfoClicked()" class="tags btn">Information</div>
+                <div onClick="GuideClicked()" class="tags btn">Guide</div>
+            </div>
+            <i id="icon" onClick="NavClicked()" class="fa-solid fa-bars"></i>
         </div>
         <div class="right">
             <div id="homeTab" class="home">
+                <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_parqdtzl.json"
+                    background="transparent" speed="1" style="width: 300px; height: 300px;" loop
+                    autoplay></lottie-player>
                 <h3>This is just another homepage</h3>
                 <p>Select Tabs from the left menu to make them visible . . .</p>
+
             </div>
             <div id="contactTab" class="contact">
                 <div class="heading">Contact Us</div>
@@ -123,7 +137,121 @@
                     </div>
                 </div>
             </div>
-            <div></div>
+            <div id="guideTab" class="guide">
+                <div class="wrapper">
+                    <img src="https://icts.io/wp-content/uploads/2020/04/django_final.png" alt="">
+                    <h3>GUIDE : Django Beginner to Advanced</h3>
+                    <p>Django is a high-level Python web framework that follows the model-view-controller (MVC)
+                        architectural pattern. It provides a robust set of tools and features for building web
+                        applications quickly and efficiently. We'll be discussing some of the core components of the
+                        Django that are most crucial and can be adapted to make robust applications or backend in same
+                        framework.</p>
+                    <h4>
+                        1. Getting Started with Django:
+                        - Installing Python and Django: Install Python, which is the programming language Django is
+                        built on, and then install Django itself.<br>
+                        - Setting up a virtual environment: Create a virtual environment to isolate your Django
+                        project's dependencies from other Python projects.<br>
+                        - Creating a new Django project: Use the Django command-line tool to create a new Django
+                        project, which sets up the initial project structure and configuration files.<br>
+                        - Understanding the project structure: Familiarize yourself with the main components of a Django
+                        project, such as the settings file, URL routing, and app structure.<br><br>
+
+                        2. Django Models and Database:<br>
+                        - Defining models and fields: Define Django models to represent your application data. Specify
+                        fields for each model to define the data structure.<br>
+                        - Creating database tables using migrations: Use Django's migration system to create database
+                        tables based on your models and keep them in sync with any changes.<br>
+                        - Performing CRUD operations on models: Learn how to create, retrieve, update, and delete data
+                        using Django's ORM (Object-Relational Mapping) methods.<br>
+                        - Working with relationships: Establish relationships between models, such as one-to-one,
+                        one-to-many, and many-to-many relationships, to represent complex data structures.<br><br>
+
+                        3. Django Views and URL Routing:
+                        - Creating views to handle HTTP requests: Define view functions or classes that handle incoming
+                        HTTP requests and return appropriate responses.
+                        - Mapping URLs to views using URL patterns: Configure URL patterns in Django's URL configuration
+                        file to map specific URLs to corresponding views.
+                        - Using class-based views: Explore Django's class-based views, which provide reusable and
+                        structured views for common functionality.
+                        - Implementing URL parameters and query parameters: Learn how to capture URL parameters and
+                        process query parameters in your views.<br><br>
+
+                        4. Django Templates and Frontend:<br>
+                        - Creating HTML templates with Django's template language: Design HTML templates using Django's
+                        template language, which allows you to dynamically render data.<br>
+                        - Using template inheritance and include templates: Organize your templates by utilizing
+                        template inheritance to create a base template and extend it in child templates. Also, reuse
+                        common template snippets using the include tag.<br>
+                        - Passing data from views to templates: Pass data from views to templates to dynamically display
+                        information in your HTML pages.<br>
+                        - Working with forms and form validation: Create forms in Django, handle form submissions, and
+                        perform on user input.<br><br>
+
+                        5. Django Authentication and Authorization:<br>
+                        - Implementing user registration and login functionality: Enable user registration and login
+                        features in your Django application to authenticate users.<br>
+                        - Using Django's built-in authentication views and forms: Utilize Django's pre-built views and
+                        forms for handling user authentication and password management.<br>
+                        - Restricting access to views based on user roles and permissions: Control access to certain
+                        views or functionality based on user roles and permissions using Django's built-in authorization
+                        system.<br>
+                        - Customizing authentication and authorization behavior: Customize the authentication and
+                        authorization behavior to fit your application's specific requirements.<br><br>
+
+                        6. Django Admin:<br>
+                        - Utilizing Django's admin interface: Take advantage of Django's admin interface to manage your
+                        application's data and perform administrative tasks.<br>
+                        - Registering models for admin management: Register your models with the admin interface to
+                        enable CRUD operations on your data through the admin interface.<br>
+                        - Customizing the admin interface with ModelAdmin options: Customize the appearance and behavior
+                        of the admin interface by configuring ModelAdmin options for your registered models.<br>
+                        - Creating custom admin actions and filters: Extend the functionality of the admin interface by
+                        creating custom actions and to perform bulk operations or filter data.<br><br>
+
+                        7. Django REST Framework:<br>
+                        - Building RESTful APIs using Django REST Framework: Learn how to create APIs using Django REST
+                        Framework, a powerful toolkit for building web APIs.<br>
+                        ining serializers for data serialization/deserialization: Use serializers to convert complex
+                        data types, such as Django models, into JSON or other formats for API communication.<br>
+                        - Creating API views and endpoints: Define API views and endpoints to handle HTTP requests and
+                        return appropriate responses for your API resources.<br>
+                        - Implementing authentication and permissions for APIs: Secure your APIs by implementing
+                        authentication mechanisms and setting permissions for different API endpoints.<br><br>
+
+                        8. Testing and Debugging:<br>
+                        - Writing unit tests for Django applications: Create unit tests to verify the correctness of
+                        your Django application's individual components and functionalities.<br>
+                        - Using Django's testing framework and assertions: Utilize Django's testing framework and
+                        built-in assertions to write effective and maintainable tests.<br>
+                        - Debugging and troubleshooting Django applications: Learn techniques for debugging and
+                        troubleshooting common issues in Django applications.<br>
+                        - Utilizing logging and error handling techniques: Implement logging and error handling
+                        strategies to and handle errors in your Django.<br><br>
+
+                        9. Advanced Django Concepts:<br>
+                        - Caching performance optimization: Explore techniques for caching data and optimizing the
+                        performance of your Django application.<br>
+                        - Internationalization and localization: Implement internationalization and localization
+                        features to support multiple languages and regions.<br>
+                        - Background tasks and asynchronous processing: Handle long-running or resource-intensive tasks
+                        asynchronously using Django's support for background tasks.<br>
+                        - Integration with third-party libraries and services: Integrate your Django application with
+                        external libraries and services to extend its functionality.<br><br>
+
+                        10. Deployment and Scaling:<br>
+                        - Preparing Django application for deployment: Configure your Django application for deployment
+                        by updating settings, managing static files, and preparing the database.<br>
+                        - Choosing a hosting provider and setting up a server: Select a hosting provider and set up a to
+                        deploy your Django application.<br>
+                        - Configuring web server and database server: Configure a web server (e.g., Nginx) and a
+                        database server (e.g PostgreSQL) to serve your Django application.<br>
+                        - Scaling Django application for high traffic: Learn techniques for scaling your Django
+                        application to handle high traffic and ensure its performance and availability.<br>
+
+                    </h4>
+                </div>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
